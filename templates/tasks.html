@@ -3,7 +3,7 @@
 
     <h2>I'm extending the base template!</h2>
 
-    {{% for task in meals %}
-        {{ task.meal_name }}<br>
+    {% for meal in meals %}
+        {{ meal.meal_name }}<br>
     {% endfor %}
 {% endblock %}

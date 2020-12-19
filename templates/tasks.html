@@ -1,9 +1,16 @@
-{% extends "base.html" %}
+{% extends "meals.html" %}
 {% block content %}
 
-    <h2>I'm extending the base template!</h2>
+    <h2></h2>
 
-    {% for meal in meals %}
-        {{ meal.meal_name }}<br>
+    {% for meals in meals %}
+        {{ meals.meal_1 }}<br>
+        {{ meals.meal_2 }}<br>
+        {{ meals.meal_3 }}<br>
+        {{ meals.meal_4 }}<br>
+        {{ meals.meal_5 }}<br>
+        {{ meals.meal_6 }}<br>
+        {{ meals.meal_7 }}<br>
+        
     {% endfor %}
 {% endblock %}

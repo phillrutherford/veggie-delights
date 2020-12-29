@@ -4,9 +4,11 @@
     <ul class="collapsible">
         {% for meals in meals %}
         <li>
-            <div class="collapsible-header">
+            <div class="collapsible-header teal lighten-2 white-text">
                 <i class="fas fa-caret-right"></i>
                 {{ meals.name }}
+                <a class="waves-effect waves-light btn-small">Edit</a>
+                <a class="waves-effect waves-light btn-small">Done</a>
             </div>
             <div class="collapsible-body">
                 <strong>Ingredients</strong> {{ meals.ingredients }} <br>

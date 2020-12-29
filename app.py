@@ -27,9 +27,20 @@ def get_meals():
     return render_template("meals.html", meals=meals)
 
 
-@app.route("/add_meal")
+@app.route("/add_meal", methods=["GET", "POST"])
 def add_meal():
-    return render_template("add_meal.html")
+    if request.method == "POST":
+        meals = {
+            "meal_name": request.form.get("meal_name"),
+            "ingredients": request.form.get("ingredients"),
+            "instructions": request.form.get("instructions")
+        }
+        mongo.db.meals.insert_one(meals)
+        flash("Thank you for adding your meal")
+        return redirect(url_for("get_meals"))
+
+    meals = mongo.db.meals.find().sort("meal_name", 1)
+    return render_template("add_meal.html", meals=meals)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

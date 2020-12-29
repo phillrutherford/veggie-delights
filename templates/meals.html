@@ -1,29 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2></h2>
-
-    {% for meals in meals %}
-        {{ meals.meal_1 }}<br>
-        {{ meals.meal_2 }}<br>
-        {{ meals.meal_3 }}<br>
-        {{ meals.meal_4 }}<br>
-        {{ meals.meal_5 }}<br>
-        {{ meals.meal_6 }}<br>
-        {{ meals.meal_7 }}<br>
-        
-    {% endfor %}
-
     <ul class="collapsible">
-        {% for meal in meals %}
+        {% for meals in meals %}
         <li>
             <div class="collapsible-header">
-                <i class="fas fa-caret-down"></i>
-                {{ meal.name }}
+                <i class="fas fa-caret-right"></i>
+                {{ meals.name }}
             </div>
             <div class="collapsible-body">
-                <span>Ingredients</span> {{ meal.ingredients }}
-                <span>Instructions</span> {{ meal.instructions }}
+                <strong>Ingredients</strong> {{ meals.ingredients }} <br>
+                <strong>Instructions</strong> {{ meals.instructions }}
             </div>
         </li>
         {% endfor %}

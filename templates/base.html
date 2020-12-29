@@ -21,7 +21,7 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-utensils"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('get_meals') }}">Home</a></li>
-              
+                <li><a href="{{ url_for('add_meal') }}">Add Your Meal Here</a></li>
             </ul>
             </div>
         </nav>
@@ -30,7 +30,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align teal">Veggie Delights</h4></li>
             <li><a href="{{ url_for('get_meals') }}">Home</a></li>
-            
+            <li><a href="{{ url_for('add_meal') }}">Add Your Meal Here</a></li>
         </ul>
     </header>
     {% block content %}

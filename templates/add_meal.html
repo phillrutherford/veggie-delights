@@ -1,42 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h5>Add Your Own Meal</h5>
+   <h3 class="light-blue-text text-darken-4 center-align">Add Meal</h3>
 
-   
-    <div class="row card-panel">
-        <form class="col s12" method="POST" action="{{ url_for('add_meal')}}">
-            <div class="row">
+    <div class="row card-panel grey lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('add_meal') }}">
 
                 <!--meal name-->
-                <div class="input-field col s12">
-                    <i class="fas fa-utensils prefix"></i>
-                    <input id="meal_name" name="meal_name" type="text" class="validate" required>
-                    <label for="meal_name">Meal Name</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                        <input id="meal_name" name="meal_name" minlength="3" maxlength="50"
+                            type="text" class="validate" required>
+                        <label for="meal_name">Meal Name</label>
+                    </div>
                 </div>
 
-                <!-- Ingredients-->
-                <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix"></i>
-                    <textarea id="ingredients" name="ingredients" class="materialize-textarea"></textarea>
-                    <label for="ingredients">Ingredients</label>
+                <!--Ingredients-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                        <textarea id="meal_ingredients" name="meal_ingredients" minlength="5"
+                            maxlength="500" class="materialize-textarea validate" required></textarea>
+                        <label for="meal_ingredients">Meal Ingredients</label>
+                    </div>
                 </div>
-
+                
                 <!--Instructions-->
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix"></i>
-                    <textarea id="instructions" name="instructions" class="materialize-textarea"></textarea>
-                    <label for="instructions">Instructions</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                        <textarea id="meal_instructions" name="meal_instructions" minlength="5"
+                            maxlength="500" class="materialize-textarea validate" required></textarea>
+                        <label for="meal_instructions">Meal Instructions</label>
+                    </div>
+                 </div>
+                    <!--submit button-->
+                <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                        Add Meal <i class="fas fa-plus-square right"></i>
+                    </button>
                 </div>
             </div>
-            <!--submit button-->
-                <button class="btn waves-effect waves-light" type="submit">Submit Meal
-                    <i class="material-icons right fas fa-plus-square"></i></i>
-                </button>
-        
         </form>
     </div>
-            
 
 
 {% endblock %}

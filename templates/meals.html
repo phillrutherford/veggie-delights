@@ -1,20 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <h3 class="light-blue-text text-darken-4 center-align">All Meals</h3>
+
     <ul class="collapsible">
-        {% for meals in meals %}
+        {% for meal in meals %}
         <li>
-            <div class="collapsible-header teal lighten-2 white-text">
-                <i class="fas fa-caret-right"></i>
-                {{ meals.name }}
-                <a href="{{url_for('edit_meal', meals_id=meals._id)}}" class="waves-effect waves-light btn-small yellow">Edit</a>
-                <a href="{{url_for('edit_meal', meals_id=meals._id)}}" class="waves-effect waves-light btn-small green">Done</a>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <div class="col s3">
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="col s9">
+                    <strong>{{ meal.meal_name }}</strong> 
+                    <a href="{{ url_for('edit_meal', meal_id=meal._id) }}" class="btn-small light-blue lighten-1">Edit</a>
+                    <a href="" class="btn-small green accent-4">Done</a>
+                </div>
             </div>
+
+
             <div class="collapsible-body">
-                <strong>Ingredients</strong> {{ meals.ingredients }} <br>
-                <strong>Instructions</strong> {{ meals.instructions }}
+                <strong>{{ meal.meal_ingredients }}</strong>
+                <p>{{ meal.meal_instructions }}</p>
             </div>
         </li>
         {% endfor %}
     </ul>
+
 {% endblock %}

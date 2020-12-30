@@ -30,23 +30,23 @@ def get_meals():
 @app.route("/add_meal", methods=["GET", "POST"])
 def add_meal():
     if request.method == "POST":
-        meals = {
+        meal = {
             "meal_name": request.form.get("meal_name"),
-            "ingredients": request.form.get("ingredients"),
-            "instructions": request.form.get("instructions")
+            "meal_ingredients": request.form.get("meal_ingredients"),
+            "meal_instructions": request.form.get("meal_instructions")
         }
-        mongo.db.meals.insert_one(meals)
+        mongo.db.meals.insert_one(meal)
         flash("Thank you for adding your meal")
         return redirect(url_for("get_meals"))
 
     meals = mongo.db.meals.find().sort("meal_name", 1)
     return render_template("add_meal.html", meals=meals)
 
-@app.route("/edit_meal/<meals_id>", methods=["GET", "POST"])
-def edit_meal(meals_id):
-    meals = mongo.db.meals.find_one({"_id": ObjectId(meals_id)})
+@app.route("/edit_meal/<meal_id>", methods=["GET", "POST"])
+def edit_meal(meal_id):
+    meal = mongo.db.meals.find_one({"_id": ObjectId(meal_id)})
     meals = mongo.db.meals.find().sort("meal_name", 1)
-    return render_template("edit_meal.html", meals=meals)
+    return render_template("edit_meal.html", meals=meals, meal=meal)
 
 
 

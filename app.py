@@ -42,6 +42,14 @@ def add_meal():
     meals = mongo.db.meals.find().sort("meal_name", 1)
     return render_template("add_meal.html", meals=meals)
 
+@app.route("/edit_meal/<meals_id>", methods=["GET", "POST"])
+def edit_meal(meals_id):
+    meals = mongo.db.meals.find_one({"_id": ObjectId(meals_id)})
+    meals = mongo.db.meals.find().sort("meal_name", 1)
+    return render_template("edit_meal.html", meals=meals)
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

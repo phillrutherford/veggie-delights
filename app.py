@@ -44,11 +44,24 @@ def add_meal():
 
 @app.route("/edit_meal/<meal_id>", methods=["GET", "POST"])
 def edit_meal(meal_id):
+    if request.method == "POST":
+        update = {
+            "meal_name": request.form.get("meal_name"),
+            "meal_ingredients": request.form.get("meal_ingredients"),
+            "meal_instructions": request.form.get("meal_instructions")
+        }
+        mongo.db.meals.update({"_id": ObjectId(meal_id)}, update)
+        flash("Meal updated succesfully!")
+        return redirect(url_for("get_meals"))
     meal = mongo.db.meals.find_one({"_id": ObjectId(meal_id)})
     meals = mongo.db.meals.find().sort("meal_name", 1)
     return render_template("edit_meal.html", meals=meals, meal=meal)
 
-
+@app.route("/delete_meal/<meal_id>")
+def delete_meal(meal_id):
+    mongo.db.meals.remove({"_id": ObjectId(meal_id)})
+    flash("Meal Deleted Succesfully")
+    return redirect(url_for("get_meals")) 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

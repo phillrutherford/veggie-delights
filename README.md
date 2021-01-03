@@ -43,3 +43,61 @@ We continually tweak and adjust this template to help give you the best experien
 --------
 
 Happy coding!
+
+
+# Veggie Delights
+
+My data centric development project is called Veggie Delights. I am creating an app fro vegeterian meals, recipes and cooking methods. 
+Users will be able to add, edit and delete meals. My goal for this app is to simply offer users creative alternative vegetarian meals whilst allowing
+them to share their ideas and creations with others.
+
+## UX
+
+* I wanted to keep the layout design and colour scheme simple for this project. I didnt want to overwhelm the user so i stuck with the white background with dark green boxes. 
+This helped me keep everything very clear and readable for all users. The layout makes it a very easy to use application allowing all users to view the meals on offer, quickly 
+access all recipes and methods and of course sharing their own meals efficiently. 
+I used the Langar font for this project. I felt it was a unique font that still kept things simple and clearly readable. 
+
+* All of the meals submitted will be viewed on the initial homepage. From here the user will be able to access each meal with quick dropdown showing the recipes and cooking methods.
+Next to each meal will be an edit and delete button clearly outlined in its own colour. Underneath all of the meals will be the "Add your meal" feature which will direct the users to a form
+where they will be asked to fill out the meal name, ingredients and instructions. From there they will submit the meal and it will appear at the bottom of the list on the homepage.
+
+* The main target audience is of course vegetarians, however this app is not strictly focused on that group. In this generation we are finding a lot more people are experimenting with vegetarian
+and vegan meals on ocassion. This app will offer those people an insight into some of the options available to them to be creative with their cooking methods and maybe add some variety into their diets.
+
+* For this project I wanted to ensure that the user felt the app was very simple to navigate, this was my top priority and I believe that shows in the final product. I did think about adding accounts, 
+making adding/editing/deleting meals a function only members who were logged in could use. I chose not to do this on this ocassion but its certainly something that i would consider adding if I were 
+to do this again. 
+
+## Features
+
+For this project I used materialize quite often. They have alot of good features and colour schemes on offer that really allow you to be creative.
+
+1. The collapsible feature is a huge part of this application. Each meal has a dropdown feature that shows the Ingredients and Instructions. I did this to reduce clutter on the page and keep it 
+presentable. 
+
+2. I also used the card feature from materialize for my "Add your meal" page. This allowed to have a clear layout form for users to fill out the information required to add their
+meal to the site.
+
+3. The edit and delete buttons were used to give the user flexibility. This allows them to change any errors or typing mistakes they may have made when adding a meal.
+
+Other features I would have liked to introduce would ##########################
+
+## Technologies used
+
+For this project I used several different technologies.
+* jQuery
+    I chose to use jQuery for this project because I felt this simplified javascript I was implementing.
+
+* Font Awesome
+    I used font awesome to assist me in adding icons into the site to improve presentation.
+
+* Materialize
+    As I discussed previously Materialize has been hugely effective in enabling me to use several features to ensure the site is easy to use the information is laid out in a clear and concise way.
+
+* Google Fonts
+    Google Fonts is a useful tool to change the fonts throughout the project.
+
+
+## Testing
+

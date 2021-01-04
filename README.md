@@ -101,3 +101,26 @@ For this project I used several different technologies.
 
 ## Testing
 
+Throughout this project I encountered several issues which I had to tackle. 
+As with every project my first response was trial and error. By opening the site in the browser I could see exactly what was not happening and what it was i was wanting to achieve. Furthermore from there 
+I would open the google chrome dev tools to locate the error.
+
+* One scenario I had was a failing with jquery linking to my base.html causing the collapsible feature to be ineffective. I simply could not find the problem myself and in the end I asked my tutor to 
+scan my work to see if he could locate the issue. In the end it turned out to be a typo where I had http:// instead of https:// something so small and simple yet difficult to find. In this case a 
+pair of fresh eyes was all there was required in order to resolve the problem.
+
+* Furthermore I had issues linking my css file. Using the {{ url_for }} method for the first in practice had me struggling to begin with. It was not the way I was familiar with and took me somne time 
+to get used to it and understand the process. To fix the problem I went back over the course module videos to ensure I was taking the correct steps and I finally managed to get my css link working correctly.
+
+* As this was my first real time using python it took some time for get to get comfortable. My first attempt confused me so much I just restarted the project completely and used the experience to help keep
+my code more organised and easy to follow. 
+
+* Using the jinja format has proven to be extremely beneficial to this project but that did not come easily. Where I have currently {% for meal in meals %} it was initially {% for meals in meals%} as I was 
+not 100% sure where the words had to match up to begin with. The way I resolved this was revisiting the course material, as has been one of my most useful methods for debugging my coding errors. Admittidley 
+I watched the videos several times before fully grasping the concept, after that I was able to sucessfully code correctly and get my app up and running.  
+
+* An issue I am dacing currently is that the flash function is not working for me. When adding/editing/deleting a meal I want to display a message of confirmation to the user as is written in my app.py file
+however this is not working for me. I have gone through the course material on the section, ensured I have the correct files installed on my project (requirements.txt) and I have looked through the chrome 
+dev tools and I am yet to find the issue. I hope to resolve this before submitting the project.
+
+* 

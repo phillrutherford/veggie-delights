@@ -19,8 +19,8 @@
 
 
             <div class="collapsible-body">
-                <strong>{{ meal.meal_ingredients }}</strong>
-                <p>{{ meal.meal_instructions }}</p>
+                <p><h5>Ingredients <br></h5> {{ meal.meal_ingredients }}</p>
+                <p><h5>Instructions <br></h5> {{ meal.meal_instructions }}</p>
             </div>
         </li>
         {% endfor %}
@@ -29,5 +29,6 @@
 <div class="add-meal center-align">
     <a href="{{ url_for('add_meal') }}" class="btn white-text green darken-4">Add Your Meal Here</a>
 </div>
+
 
 {% endblock %}

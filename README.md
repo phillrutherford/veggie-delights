@@ -69,6 +69,10 @@ and vegan meals on ocassion. This app will offer those people an insight into so
 making adding/editing/deleting meals a function only members who were logged in could use. I chose not to do this on this ocassion but its certainly something that i would consider adding if I were 
 to do this again. 
 
+### Wireframes
+
+The wireframes I created for this project can be found in the wireframes folder. For this project I used Marvel to create some mock designs.
+
 ## Features
 
 For this project I used materialize quite often. They have alot of good features and colour schemes on offer that really allow you to be creative.
@@ -81,11 +85,14 @@ meal to the site.
 
 3. The edit and delete buttons were used to give the user flexibility. This allows them to change any errors or typing mistakes they may have made when adding a meal.
 
-Other features I would have liked to introduce would ##########################
+Other features I would have liked to introduce would be to have the ingredients be presented as a list vertically in a bullet point format. Unfortunatley I did not habve time to do this for this
+project. With the impact of covid and being someone who lives in a campervan I found wifi access extremely difficult and often found myself working outside of a Starbucks in january in Canada. 
+Not ideal circumstances but moving forward this would be a key feature that I would alter. 
 
 ## Technologies used
 
 For this project I used several different technologies.
+
 * jQuery
     I chose to use jQuery for this project because I felt this simplified javascript I was implementing.
 
@@ -119,8 +126,69 @@ my code more organised and easy to follow.
 not 100% sure where the words had to match up to begin with. The way I resolved this was revisiting the course material, as has been one of my most useful methods for debugging my coding errors. Admittidley 
 I watched the videos several times before fully grasping the concept, after that I was able to sucessfully code correctly and get my app up and running.  
 
-* An issue I am dacing currently is that the flash function is not working for me. When adding/editing/deleting a meal I want to display a message of confirmation to the user as is written in my app.py file
+* An issue I am facing currently is that the flash function is not working for me. When adding/editing/deleting a meal I want to display a message of confirmation to the user as is written in my app.py file
 however this is not working for me. I have gone through the course material on the section, ensured I have the correct files installed on my project (requirements.txt) and I have looked through the chrome 
-dev tools and I am yet to find the issue. I hope to resolve this before submitting the project.
+dev tools and I am yet to find the issue. I hope to resolve this before submitting the project. I was able to fix this issue late on, I hadn't rendered the message in my base.html. This was pointed out to me 
+by my mentor and once it was mentioned I was able to resolve it immediatley.
 
-* 
+As a user I want to be able to add/edit/delete meals quickly. I was constantly testing these functions out myself and I sent my site to my girlfriend also. Trial and error played a huge part in being able to
+complete these tasks. Being thorough in reading the code and testing in an array of ways was key to ensuring these functions are working correctly.
+
+As a user I would also like to be able to find new vegetarian meal ideas and view the ingredients required and cooking instructions quickly. To achieve this I altered my layout to have all meals on the initial 
+home page instead of having them on their own individual page. Adding the collapsible function reduced clutter kept the site tidy and easy to navigate helping the user reach their goal.
+
+Finally I ran my code through a validator to check for any issues. 
+For my app.py file I used http://pep8online.com/ and they found 4 errors in line spacing which I fixed and it now shows 0 errors.
+My html I used https://validator.w3.org/ which found 7 errors but I was unable to understand what it was asking to change specifically.
+For my CSS file I used https://jigsaw.w3.org/css-validator/validator and found 0 errors.
+Furthermore I ran the lighthouse in the chrome dev tools. This gave me a score of 91.
+
+## Deployment
+
+For this project I deployed my app through Heroku. These are the steps I followed:
+    1. Sign in to Heroku.
+    2. Add a new app named "veggie delights"
+    3. Under deployment method select "connect to github".
+    4. Link the specifc github repo to the heroku app.
+    5. Go to settings and then reveal config vars.
+    6. Add the information from the env.py file.
+    7. Scroll down to domain.
+    8. You will see this message. Your app can be found at https://flask-veggie-delights.herokuapp.com/
+
+To run this file locally:
+    1. Follow this link to the github repository https://github.com/phillrutherford/veggie-delights
+    2. Select code.
+    3. Copy the url for the repository.
+    4. In your chosen development environment open the terminal.
+    5. Type git clone and then paste the url from step 3.
+
+
+## Code
+
+* The collapsible function for the meals is from Materialize - Javascript - collapsible.
+* All of the colours are from Materialize - CSS - colour.
+* The Buttons for adding/editing/deleting meals are from Materialize - Components - Buttons.
+* I used jquery which was found alongside each function I used from Materialize.
+* Several recipes and instructions were taken from an app called Centr.
+* To build the input fields for users to add meals I used the text fields from Materialize - Forms - Text input.
+* To build the database for the information stored for each meal/ingredients/instructions I used the mongo database.
+* I added icons to the site from font awesome.
+* I used a font from google fonts.
+
+
+## Credits
+
+### Content
+
+The meal ideas came from a combination of my own personal likes and also from the centr app. 
+The colour scheme was a design mix between myself and my girlfriend Kristin.
+
+
+### Media
+
+The icons featured are from Font awesome.
+
+### Acknowledgements
+
+Inspiration for this project initially stemmed from my personal enjoyment of cooking and creating new meals. From here I used the centr app to bulk up the content. The layout was inspired by the course material where I felt the layout and readability
+were extremely clear and presentable. With the help of my mentor Jonathon on the coding side of the project and my girlfriend Kristin on the presentation side I was able to come up the end product as you see it.
